@@ -27,7 +27,7 @@
 	};
 
 	function localTime() {
-		state = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata'});
+		state = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
 	}
 
 	function musicProgress(spotify: Spotify) {
@@ -53,7 +53,7 @@
 		function connect() {
 			clearInterval(currentSetInterval); // don't need this anymore
 			let lanyard: WebSocket = new WebSocket('wss://api.lanyard.rest/socket');
-			// lanyard.onopen = () => console.log('Synced with Discord rich presence!');
+			lanyard.onopen = () => console.log('Synced with Discord rich presence!');
 
 			lanyard.onmessage = (e) => {
 				let json = JSON.parse(e.data);
@@ -103,7 +103,7 @@
 							song: activity,
 							artist: details,
 							album: state,
-							// album_art_url: activityImage
+							album_art_url: activityImage
 						} = data.spotify);
 
 						details = 'by ' + details.replace(/;/g, ',');
@@ -113,9 +113,10 @@
 						cancelAnimationFrame(currentRequestAnimationFrame);
 						tick();
 					} else if (isActivity) {
-						({ name: user.username, state, details } = data.activities[activityNumber]);
-						activityImage;
-							 images[activity] || 'question_mark.png';
+						({ name: activity, details, state } = data.activities[activityNumber]);
+						activityImage = data.activities[activityNumber].assets
+							? `https://cdn.discordapp.com/app-assets/${data.activities[activityNumber].application_id}/${data.activities[activityNumber].assets.large_image}.webp?size=512`
+							: images[activity] || 'question_mark.png';
 						smallImage = '';
 						if (
 							data.activities[activityNumber].assets &&
@@ -157,7 +158,6 @@
 		{#if isSpotify}
 			<a href={songLink} target="_blank" rel="noreferrer">
 				<Tooltip tip="Open Spotify">
-					<h4 class='usrname'><strong>@{user.username}</strong></h4>
 					<h3>{activity}</h3>
 				</Tooltip>
 			</a>
@@ -187,11 +187,6 @@
 		text-decoration: underline;
 		text-decoration-color: var(--bg-color);
 		transition: 0.3s var(--bezier-one);
-	}
-
-	.usrname {
-		color: var(--text-primary);
-		font-size: 1.2rem;
 	}
 
 	h2 {
