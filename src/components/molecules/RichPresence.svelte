@@ -29,7 +29,7 @@
 	function localTime() {
 		state = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
 	}
-
+	
 	function musicProgress(spotify: Spotify) {
 		spotifyTotal = spotify.timestamps.end - spotify.timestamps.start;
 		progress = 100 - (100 * (spotify.timestamps.end - new Date().getTime())) / spotifyTotal;
