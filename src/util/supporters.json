@@ -1,0 +1,23 @@
+[
+    {
+        "name": "JohnDoe",
+        "icon": "/supporters/afterst0rm.webp",
+        "message":
+            "I wish I could do more, but I appreciate your work and creativity. You'll achieve great highs, brother. Big hugs from your Brazilian friend."
+    },
+    {
+        "name": "Sumer",
+        "icon": "/supporters/kevin_t.webp",
+        "message": "hi"
+    },
+    {
+        "name": "TechAppInnovation",
+        "icon": "/supporters/taku.webp",
+        "message": "3 Covfefe"
+    },
+    {
+        "name": "Samay",
+        "icon": "/supporters/notIvan.webp",
+        "message": "i forgot ☠️"
+    }
+]
