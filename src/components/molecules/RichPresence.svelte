@@ -114,8 +114,7 @@
 						tick();
 					} else if (isActivity) {
 						({ name: activity, details, state } = data.activities[activityNumber]);
-						activityImage = data.activities[activityNumber].assets
-							? `https://cdn.discordapp.com/app-assets/${data.activities[activityNumber].application_id}/${data.activities[activityNumber].assets.large_image}.webp?size=512`
+						activityImage 
 							: images[activity] || 'question_mark.png';
 						smallImage = '';
 						if (
