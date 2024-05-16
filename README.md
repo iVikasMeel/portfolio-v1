@@ -1,6 +1,6 @@
-![mockup](https://raw.githubusercontent.com/iVikasMeel/portfolio-v1/main/static/prev.png)
-
 # 🎨 Personal Portfolio
+
+![mockup](https://raw.githubusercontent.com/iVikasMeel/portfolio-v1/main/static/prev.png)
 
 A simple site to showcase the art I've made over the years. Check it out at [ivikas-portfolio.vercel.app](https://ivikas-portfolio.vercel.app/).
 
