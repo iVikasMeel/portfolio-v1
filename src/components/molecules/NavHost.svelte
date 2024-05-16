@@ -3,7 +3,9 @@
 	let y: number;
 </script>
 
+
 <nav>
+	
 	<div class:scrolled={y > 20}>
 		<ul>
 			<Nav href="#home" section="/" isSelected={y < 350}>
