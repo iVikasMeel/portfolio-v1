@@ -27,9 +27,9 @@
 	};
 
 	function localTime() {
-		state = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kolkata' });
+		state = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
 	}
-	
+
 	function musicProgress(spotify: Spotify) {
 		spotifyTotal = spotify.timestamps.end - spotify.timestamps.start;
 		progress = 100 - (100 * (spotify.timestamps.end - new Date().getTime())) / spotifyTotal;
@@ -114,7 +114,8 @@
 						tick();
 					} else if (isActivity) {
 						({ name: activity, details, state } = data.activities[activityNumber]);
-						activityImage 
+						activityImage = data.activities[activityNumber].assets
+							? `https://cdn.discordapp.com/app-assets/${data.activities[activityNumber].application_id}/${data.activities[activityNumber].assets.large_image}.webp?size=512`
 							: images[activity] || 'question_mark.png';
 						smallImage = '';
 						if (
