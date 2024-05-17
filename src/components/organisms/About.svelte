@@ -26,7 +26,7 @@
 				><span>{Math.floor(Number(age))}</span></Tooltip
 			>
 			year old frontend developer and freelancer based in India. I’ve taken coding seriously since 
-			<span>2022</span>, and have been freelancing since <span>2023</span>.
+			<span>2022</span>, and have been freelancing since <span>2024</span>.
 			Recently, however, I’ve grown a knack for giving back to community. I like contributing to 
 			<Tooltip tip="🤓">
 				<a href="https://github.com/xafn" target="_blank" rel="noreferrer">
