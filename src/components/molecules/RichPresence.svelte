@@ -20,7 +20,6 @@
 		spotifyTotal: number,
 		currentSetInterval: ReturnType<typeof setInterval>,
 		currentRequestAnimationFrame: number;
-	// hasStatus = false,
 
 	const images: { [key: string]: string } = {
 		'CLIP STUDIO PAINT': 'https://i.imgur.com/IUVs3RB.png'
@@ -86,17 +85,6 @@
 				if (opcode === 0) {
 					isSpotify = data.listening_to_spotify;
 					isActivity = !!data.activities[0];
-					// console.log(isActivity, hasStatus);
-					// hasStatus = data.activities[0].name === 'Custom Status';
-
-					// // everything is so ugly oh my god why is there so many edge cases
-					// if (hasStatus && data.activities[1].name) {
-					// 	isActivity = true;
-					// 	activityNumber = 1;
-					// } else {
-					// 	isActivity = false;
-					// 	activityNumber = 0;
-					// }
 
 					if (isSpotify) {
 						({
