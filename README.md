@@ -4,7 +4,7 @@
 
 <br/>
 
-A simple site to showcase the art I've made over the years. Check it out at [ivikas-portfolio.vercel.app](https://ivikas-portfolio.vercel.app/).
+A simple site to showcase the art I've made over the years. Check it out at [ivikas-portfolio.vercel.app](https://ivikas-portfolio.vercel.app/)
 
 
 ## 📝 Notes
