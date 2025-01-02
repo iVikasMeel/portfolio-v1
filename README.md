@@ -27,7 +27,6 @@ Steps to follow if you want to replicate the hosting of this site. You may host 
 ## ⚖️ Licensing
 
 ### Code
-
 All website-related code is distributed under the [AGPL license](LICENSE).
 
 ### Art Assets
