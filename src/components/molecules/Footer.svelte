@@ -4,6 +4,7 @@
 </script>
 
 <hr />
+
 <footer class="wrapper">
 	<Socials />
 	<h6>
