@@ -3,7 +3,6 @@
 	let y: number;
 </script>
 
-
 <nav>
 	
 	<div class:scrolled={y > 20}>
